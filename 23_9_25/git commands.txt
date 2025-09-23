@@ -42,10 +42,19 @@ Log files-
 git log                     
 git log --oneline            
 git diff                    
-git diff --staged           
+git diff --staged
+
+Fetch commands-
+
+git fetch 
+git fetch origin
+git fetch --all
+git fetch origin branch_name
+
 
 
 Undo changes-
 
 git checkout -- <file>       
 git reset HEAD <file>        
+
