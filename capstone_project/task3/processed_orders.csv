@@ -1,0 +1,5 @@
+OrderID,OrderDate,OrderMonth,CustomerID,Name,Country,ProductID,ProductName,Category,Quantity,Price,TotalPrice
+O001,2025-10-01,October,C001,Neha,India,P101,Laptop,Electronics,1,800,800.0
+O002,2025-10-02,October,C002,Ali,UAE,P103,Keyboard,Accessories,2,35,70.0
+O003,2025-10-03,October,C001,Neha,India,P102,Mouse,Accessories,5,20,100.0
+O004,2025-10-04,October,C003,Sophia,UK,P104,Headphones,Audio,3,50,150.0
