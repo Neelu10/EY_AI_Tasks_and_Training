@@ -1,0 +1,4 @@
+OrderID,CustomerID,ProductID,Quantity,OrderDate,TotalPrice,OrderMonth,ProductName,Category,Price,Name,Country
+O001,C001,P101,2,2025-10-17,1600,October,Laptop,Electronics,800,Neha,India
+O002,C002,P102,5,2025-10-17,100,October,Mouse,Accessories,20,Ali,UAE
+O003,C003,P103,3,2025-09-20,105,September,Keyboard,Accessories,35,Sophia,UK
