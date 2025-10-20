@@ -1,0 +1,20 @@
+2025-10-17 13:52:23,662 - INFO - Order received: O001
+2025-10-17 13:52:23,667 - INFO - Order processed: O001 | TotalPrice: 800.0
+2025-10-17 13:52:24,663 - INFO - Order received: O002
+2025-10-17 13:52:24,666 - INFO - Order processed: O002 | TotalPrice: 70.0
+2025-10-17 13:52:25,664 - INFO - Order received: O003
+2025-10-17 13:52:25,666 - INFO - Order processed: O003 | TotalPrice: 100.0
+2025-10-17 13:52:26,666 - INFO - Order received: O004
+2025-10-17 13:52:26,669 - INFO - Order processed: O004 | TotalPrice: 150.0
+2025-10-17 13:52:27,671 - INFO - ETL completed in 4.01 seconds
+2025-10-17 13:52:27,672 - INFO - Total orders processed: 4
+2025-10-20 19:43:17,930 - INFO - Order received: O001
+2025-10-20 19:43:18,021 - INFO - Order processed: O001 | TotalPrice: 800.0
+2025-10-20 19:43:18,946 - INFO - Order received: O002
+2025-10-20 19:43:18,948 - INFO - Order processed: O002 | TotalPrice: 70.0
+2025-10-20 19:43:19,947 - INFO - Order received: O003
+2025-10-20 19:43:19,949 - INFO - Order processed: O003 | TotalPrice: 100.0
+2025-10-20 19:43:20,948 - INFO - Order received: O004
+2025-10-20 19:43:20,950 - INFO - Order processed: O004 | TotalPrice: 150.0
+2025-10-20 19:43:21,952 - INFO - ETL completed in 4.02 seconds
+2025-10-20 19:43:21,952 - INFO - Total orders processed: 4
