@@ -1,0 +1,9 @@
+crewai
+langchain
+openai
+streamlit
+pandas
+requests
+python-dotenv
+fpdf
+matplotlib
