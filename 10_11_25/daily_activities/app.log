@@ -1,0 +1,22 @@
+2025-11-10 10:31:49,945 - INFO - Incoming request: GET http://127.0.0.1:8000/
+2025-11-10 10:31:49,946 - INFO - Response status: 200
+2025-11-10 10:34:23,014 - INFO - Incoming request: POST http://127.0.0.1:8000/ask
+2025-11-10 10:34:23,018 - INFO - Response status: 200
+2025-11-10 10:34:33,478 - INFO - Incoming request: POST http://127.0.0.1:8000/ask
+2025-11-10 10:34:33,480 - INFO - Response status: 200
+2025-11-10 10:34:41,823 - INFO - Incoming request: POST http://127.0.0.1:8000/ask
+2025-11-10 10:34:41,825 - INFO - Response status: 200
+2025-11-10 10:34:54,446 - INFO - Incoming request: POST http://127.0.0.1:8000/ask
+2025-11-10 10:34:54,448 - INFO - Response status: 200
+2025-11-10 10:35:16,074 - INFO - Incoming request: POST http://127.0.0.1:8000/ask
+2025-11-10 10:35:16,076 - INFO - Response status: 200
+2025-11-10 10:35:23,419 - INFO - Incoming request: POST http://127.0.0.1:8000/ask
+2025-11-10 10:35:23,420 - INFO - Response status: 200
+2025-11-10 10:39:10,782 - INFO - Incoming request: POST http://127.0.0.1:8000/get
+2025-11-10 10:39:10,783 - INFO - Response status: 404
+2025-11-10 10:39:27,908 - INFO - Incoming request: POST http://127.0.0.1:8000/
+2025-11-10 10:39:27,908 - INFO - Response status: 405
+2025-11-10 10:39:32,936 - INFO - Incoming request: GET http://127.0.0.1:8000/
+2025-11-10 10:39:32,936 - INFO - Response status: 200
+2025-11-10 10:40:17,959 - INFO - Incoming request: POST http://127.0.0.1:8000/ask
+2025-11-10 10:40:17,960 - INFO - Response status: 200
