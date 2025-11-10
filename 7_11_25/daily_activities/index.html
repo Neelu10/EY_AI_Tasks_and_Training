@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Q&A Assistant</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f7f8fc;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+      width: 100%;
+      max-width: 720px;
+      transition: all 0.3s ease;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 15px;
+      display: block;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    #responseBox {
+      margin-top: 25px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f4f6fb;
+      border: 1px solid #e1e1e1;
+      min-height: 100px;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      color: #222;
+      font-size: 15px;
+    }
+
+    .loader {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #007bff;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 0.8s linear infinite;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💬 AI Q&A Assistant</h1>
+
+    <label for="topic">Topic</label>
+    <input id="topic" placeholder="e.g., Java, Machine Learning, HR Policies" />
+
+    <label for="question">Question</label>
+    <textarea id="question" rows="5" placeholder="Ask your question here..."></textarea>
+
+    <button id="askBtn">Ask Question</button>
+
+    <div id="responseBox">Your answer will appear here...</div>
+
+    <div class="footer">Powered by <b>OpenAI</b> | Built with FastAPI</div>
+  </div>
+
+  <script>
+    const button = document.getElementById("askBtn");
+    const responseBox = document.getElementById("responseBox");
+
+    button.addEventListener("click", async () => {
+      const topic = document.getElementById("topic").value.trim();
+      const question = document.getElementById("question").value.trim();
+
+      if (!topic || !question) {
+        responseBox.innerHTML = "⚠️ Please fill in both topic and question.";
+        responseBox.style.color = "red";
+        return;
+      }
+
+      responseBox.style.color = "#222";
+      responseBox.innerHTML = '<span class="loader"></span> Thinking...';
+
+      try {
+        const res = await fetch("/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ topic, question }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          responseBox.innerHTML = "❌ Error: " + (data.detail || "Something went wrong.");
+          responseBox.style.color = "red";
+          return;
+        }
+
+        responseBox.innerHTML = `<b>Answer:</b><br>${data.response || "(No response)"}`;
+      } catch (err) {
+        responseBox.innerHTML = "🌐 Network error: " + err.message;
+        responseBox.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
